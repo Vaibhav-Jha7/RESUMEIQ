@@ -15,7 +15,7 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "https://resumeiq-1-z9lr.onrender.com",
+    origin: process.env.CLIENT_URL || "https://resumeiq-1-z9lr.onrender.com/api",
     credentials: true, // required so the httpOnly auth cookie is sent/received
   })
 );
