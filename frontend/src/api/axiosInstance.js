@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://resumeiq-u3rx.onrender.com",
+  baseURL: import.meta.env.VITE_API_URL || "https://resumeiq-u3rx.onrender.com/api",
   withCredentials: true, // sends/receives the httpOnly JWT cookie
 });
 
