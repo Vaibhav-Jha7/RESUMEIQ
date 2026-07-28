@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-paper-line;
+  }
+  body {
+    @apply antialiased;
+  }
+  ::selection {
+    @apply bg-scan/20;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-ink px-5 py-2.5 text-sm font-medium text-paper shadow-[0_1px_2px_rgba(18,24,38,0.06),0_8px_20px_-8px_rgba(18,24,38,0.35)] transition-all duration-200 hover:bg-ink-soft hover:shadow-[0_1px_2px_rgba(18,24,38,0.08),0_12px_24px_-8px_rgba(18,24,38,0.45)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-paper-line bg-paper-card px-5 py-2.5 text-sm font-medium text-ink900 transition-all duration-200 hover:border-ink/30 hover:shadow-[0_4px_12px_-6px_rgba(18,24,38,0.15)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .field-label {
+    @apply mb-1.5 block text-xs font-medium uppercase tracking-wide text-muted;
+  }
+  .field-input {
+    @apply w-full rounded-md border border-paper-line bg-paper-card px-3.5 py-2.5 text-sm text-ink900 outline-none transition-all duration-150 placeholder:text-muted/60 focus:border-ink focus:shadow-[0_0_0_3px_rgba(18,24,38,0.06)];
+  }
+  .card {
+    @apply rounded-md border border-paper-line bg-paper-card shadow-[0_1px_2px_rgba(18,24,38,0.04),0_10px_24px_-16px_rgba(18,24,38,0.25)] transition-shadow duration-200;
+  }
+  .card-hover {
+    @apply hover:border-ink/20 hover:shadow-[0_2px_4px_rgba(18,24,38,0.05),0_16px_32px_-16px_rgba(18,24,38,0.3)];
+  }
+  .tag {
+    @apply inline-flex items-center gap-1 rounded-md px-2.5 py-1 font-mono text-xs;
+  }
+  .stat-card {
+    @apply card flex items-center gap-4 px-5 py-4;
+  }
+  .icon-tile {
+    @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-md;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
